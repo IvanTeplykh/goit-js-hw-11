@@ -5,7 +5,6 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const SimpleLightbox = SimpleLightboxModule.default || SimpleLightboxModule;
-
 let lightbox;
 
 export function markupGallery(images) {
