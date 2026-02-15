@@ -11,19 +11,24 @@
     <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-BXVBRZ-d.css">
   </head>
   <body>
-    <form class="form">
-      <p class="js-search-query">Search query :</p>
-      <label>
-        <input
-          type="text"
-          name="searchText"
-          placeholder="Search images..."
-          required
-        />
-      </label>
-      <button type="submit">Search</button>
-    </form>
-    <div class="loader hidden"></div>
-    <ul class="gallery"></ul>
+    <!-- Search Form Section -->
+    <header>
+      <form class="form">
+        <p class="js-search-query">Search query :</p>
+        <label>
+          <input type="text" name="searchText" placeholder="Search images..." />
+        </label>
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <!-- Loader Element (hidden by default) -->
+      <div class="loader hidden"></div>
+
+      <!-- Image Gallery List -->
+      <ul class="gallery"></ul>
+    </main>
+
+    <!-- Main JavaScript Module -->
   </body>
 </html>
