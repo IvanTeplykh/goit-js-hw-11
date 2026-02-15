@@ -1,14 +1,17 @@
-//imports
+// Imports from libraries
 import SimpleLightboxModule from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+// Initialize SimpleLightbox variable
 const SimpleLightbox = SimpleLightboxModule.default || SimpleLightboxModule;
 let lightbox;
 
+// Function to render the gallery markup
 export function markupGallery(images) {
   const galleryContainer = document.querySelector('.gallery');
+  // Create HTML markup for each image
   const galleryMarkup = images
     .map(
       image =>
@@ -41,8 +44,11 @@ export function markupGallery(images) {
         </li>`
     )
     .join('');
+
+  // Insert markup into the gallery container
   galleryContainer.innerHTML = galleryMarkup;
 
+  // Initialize or refresh SimpleLightbox
   if (!lightbox) {
     lightbox = new SimpleLightbox('.gallery a', {
       captions: true,
@@ -55,14 +61,20 @@ export function markupGallery(images) {
     lightbox.refresh();
   }
 }
+
+// Function to clear the gallery content
 export function clearGallery() {
   const galleryContainer = document.querySelector('.gallery');
   galleryContainer.innerHTML = '';
 }
+
+// Function to show the loader
 export function showLoader() {
   const loaderContainer = document.querySelector('.loader');
   loaderContainer.classList.remove('hidden');
 }
+
+// Function to hide the loader
 export function hideLoader() {
   const loaderContainer = document.querySelector('.loader');
   loaderContainer.classList.add('hidden');
