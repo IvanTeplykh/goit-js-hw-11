@@ -12,7 +12,7 @@ export function markupGallery(images) {
   const galleryMarkup = images
     .map(
       image =>
-        `<div class="photo-card">
+        `<li class="photo-card">
             <a href="${image.largeImageURL}">
                 <img src="${image.webformatURL}" alt="${image.tags}"/>
             </a>
@@ -38,7 +38,7 @@ export function markupGallery(images) {
                 </p>
                 </div>
             </div>
-        </div>`
+        </li>`
     )
     .join('');
   galleryContainer.innerHTML = galleryMarkup;
